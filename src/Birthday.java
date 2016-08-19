@@ -5,8 +5,8 @@ public class Birthday {
 		// TODO Auto-generated method stub
 
 Scanner input = new Scanner(System.in);
-int answer, numP=0, days;
-double prob, inputP;
+int answer, numP=0, days=365;
+double prob=1, inputP;
 
 do{
 	do{	
@@ -15,7 +15,6 @@ do{
 	  }while(inputP<=0||inputP>=1.0);
 	
 	System.out.println("Calculation section:\n------------------");
-	days =365; prob=1;
 	for(;days>0;){
 		numP++;
 		
