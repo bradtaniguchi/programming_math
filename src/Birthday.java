@@ -18,11 +18,10 @@ do{
 	numP=0; days =365; prob=1;
 	for(;days>0;){
 		numP++;
-		
 		prob*=days/365.0;
-		
 		System.out.println(days+" :"+prob);
 		days--;
+		
 		if(1-prob>inputP)
 			break;
 				 }
