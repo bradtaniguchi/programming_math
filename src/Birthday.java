@@ -9,22 +9,24 @@ int answer, numP, days;
 double prob, inputP;
 
 do{
-	
-	do{
-		
+	do{	
 		System.out.print("\nEnter a prob - at least 2 people share the same Bday:");
 		inputP=input.nextDouble();
-	}while(inputP<=0||inputP>=1.0);
+	  }while(inputP<=0||inputP>=1.0);
 	
-	numP=0; days =366; prob=1;
+	System.out.println("Calculation section:\n------------------");
+	numP=0; days =365; prob=1;
 	for(;days>0;){
 		numP++;
-		days--;
+		
 		prob*=days/365.0;
 		
+		System.out.println(days+" :"+prob);
+		days--;
 		if(1-prob>inputP)
 			break;
-	}
+				 }
+	System.out.println("------------------");
 	System.out.println(numP+" people are required");
 	System.out.println("The prob that two or more have the same birthday is "+(1-prob));
 	System.out.print("\nRun again? 1 for yes, any other number for no: ");
